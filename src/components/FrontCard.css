@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+.front-card {
+  width: 285px;
+  height: 156px;
+  background-image: url('/bg-card-front.png');
+  border-radius: 6px;
+  padding: 16px 20px;
+}
+
+.front-card__icon-primary {
+  width: 54px;
+  height: 30px;
+  margin-bottom: 37px;
+}
+
+.front-card__number-card {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 2.2px;
+  font-weight:400;
+  color: var(--white);
+  margin-bottom: 17px;
+}
+
+.front-card__info-container {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: .9rem;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: .129rem;
+  color: var(--white);
+}
