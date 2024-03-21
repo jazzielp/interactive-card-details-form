@@ -1,10 +1,8 @@
-import { FrontCard } from './components/FrontCard'
-import { BackCard } from './components/BackCard'
+import { Header } from './components/Header'
 export function App () {
   return (
     <>
-      <FrontCard />
-      <BackCard />
+      <Header />
     </>
   )
 }
