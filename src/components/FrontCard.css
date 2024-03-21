@@ -4,6 +4,9 @@
   width: 285px;
   height: 156px;
   background-image: url('/bg-card-front.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 6px;
   padding: 16px 20px;
 }

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+.back-card {
+  width: 285px;
+  height: 156px;
+  background-image: url('/bg-card-back.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 6px;
+  padding: 16px 20px;
+}
+
+.back-card__security-code {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: .9rem;
+  color: var(--white);
+  letter-spacing: .129rem;
+  text-align: end;
+  margin: 55px 15px;
+}
