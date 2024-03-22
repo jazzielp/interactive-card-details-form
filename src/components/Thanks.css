@@ -1,0 +1,27 @@
+.thanks {
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.thanks__img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 28px;
+
+}
+
+.thanks__title {
+  font-size: 2.8rem;
+  letter-spacing: .342rem;
+  color: var(--very-dark-violet);
+}
+
+.thanks__paragraph {
+  font-size: 1.8rem;
+  color: #8F8694;
+  margin-bottom: 28px;
+
+}

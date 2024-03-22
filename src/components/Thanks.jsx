@@ -1,12 +1,13 @@
 import { ButtonPrincipal } from './ButtonPrincipal'
-const IconComplete = '../icons/icon-complete.svg'
+import IconComplete from '../icons/icon-complete.svg'
+import './Thanks.css'
 export const Thanks = () => {
   return (
-    <article>
-      <img src={IconComplete} alt='Icon complete' />
-      <h2>TANK YOU!</h2>
-      <p>We’ve added your card details</p>
-      <ButtonPrincipal />
+    <article className='thanks'>
+      <img className='thanks__img' src={IconComplete} alt='Icon complete' />
+      <h2 className='thanks__title'>TANK YOU!</h2>
+      <p className='thanks__paragraph'>We’ve added your card details</p>
+      <ButtonPrincipal text='Continue' />
     </article>
   )
 }
