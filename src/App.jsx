@@ -1,5 +1,6 @@
 import { Header } from './components/Header'
 import { Form } from './components/Form'
+import { Thanks } from './components/Thanks'
 export function App () {
   return (
     <>
@@ -7,6 +8,7 @@ export function App () {
       <main>
         <Form />
       </main>
+      <Thanks />
     </>
   )
 }
