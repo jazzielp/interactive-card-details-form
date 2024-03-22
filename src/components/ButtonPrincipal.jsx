@@ -1,6 +1,6 @@
 import './ButtonPrincipal.css'
-export const ButtonPrincipal = ({ text }) => {
+export const ButtonPrincipal = ({ text, handleClick, type }) => {
   return (
-    <button>{text}</button>
+    <button type={type} onClick={handleClick ? () => handleClick() : null}>{text}</button>
   )
 }
