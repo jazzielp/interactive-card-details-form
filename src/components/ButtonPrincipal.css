@@ -8,4 +8,10 @@ button {
   font-size: 1.8rem;
   font-family: "Space Grotesk", sans-serif;
   border-radius: 8px;
+  transition: all .2s ease;
+}
+
+button:hover {
+  background-color: hsl(278, 94%, 30%);
+  cursor: pointer;
 }
