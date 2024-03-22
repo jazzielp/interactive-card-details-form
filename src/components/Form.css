@@ -1,0 +1,88 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap'); */
+
+.form-card {
+  width: 327px;
+}
+
+.form-card__label{
+  font-size: 1.2rem;
+  list-style: .2rem;
+  font-weight: 500;
+  color: var(--very-dark-violet)
+}
+
+.form-card__input{
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--light-grayish-violet);
+  color: var(--very-dark-violet);
+  font-size: 1.8rem;
+}
+
+.form-card__input-error {
+  border: 1px solid var(--red);
+}
+
+.form-card__input-long{
+  width: 100%;
+}
+
+.form-card__input-short{
+  width: 72px;
+}
+
+.form-card__input-auto{
+  width: 164px;
+}
+
+.form-card__input::placeholder {
+  color: var(--light-grayish-violet);
+}
+
+.form-card__input:focus-visible {
+  outline: 1px solid hsl(278, 94%, 30%);
+}
+
+
+
+.form-card__name-container,
+.form-card__number-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.form-card__info-container {
+  display: flex;
+  gap: 4px;
+}
+
+.form-card__date-container,
+.form-card__security-code-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-card__info-date {
+  display: flex;
+  gap: 8px;
+}
+
+.form-card__security-code-container {
+  margin-left: 6px;
+}
+
+.form-card__error {
+ font-size: 1.2rem;
+ color: var(--red);
+}
+
+.hidden {
+  display: none;
+}
+
+.form-card__button-container {
+  margin-top: 40px;
+}
