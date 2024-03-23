@@ -3,32 +3,35 @@ import { Form } from './components/Form'
 import { Thanks } from './components/Thanks'
 import { useState } from 'react'
 export function App () {
+  // Json to render information in the card preview
   const cardJson = {
     name: {
-      text: 'JANE APPLESEED',
+      text: null,
       error: null
     },
     number: {
-      text: '0000 0000 0000 0000',
+      text: null,
       error: null
     },
     month: {
-      text: '00',
+      text: null,
       error: null
     },
     year: {
-      text: '00',
+      text: null,
       error: null
     },
     code: {
-      text: '000',
+      text: null,
       error: null
     }
   }
 
+  // This state helps us to make the rendering of the Thanks component work.
   const [isComplete, setIsComplete] = useState(false)
   const [dataCard, setDataCard] = useState(cardJson)
 
+  // It is used to simulate that the form was submitted and to be able to render a thank you message
   const handleComplete = () => {
     setIsComplete(!isComplete)
   }

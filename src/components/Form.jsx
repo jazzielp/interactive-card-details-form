@@ -3,11 +3,26 @@ import { ButtonPrincipal } from './ButtonPrincipal'
 import { useRef, useState } from 'react'
 export const Form = ({ dataCard, setDataCard }) => {
   const [dataCardRender, setDataCardRender] = useState({
-    name: '',
-    number: '',
-    month: '',
-    year: '',
-    code: ''
+    name: {
+      text: '',
+      error: null
+    },
+    number: {
+      text: '',
+      error: null
+    },
+    month: {
+      text: '',
+      error: null
+    },
+    year: {
+      text: '',
+      error: null
+    },
+    code: {
+      text: '',
+      error: null
+    }
   })
   const input1Ref = useRef(null)
   const input2Ref = useRef(null)
@@ -17,7 +32,35 @@ export const Form = ({ dataCard, setDataCard }) => {
 
   const handleSumit = (e) => {
     e.preventDefault()
-    console.log(e)
+    const newDataCard = { ...dataCardRender }
+    const inputName = input1Ref
+    const errorName = isInputEmpty(inputName.current.value)
+    newDataCard.name.error = errorName
+
+    const inputNumber = input2Ref
+    const errorNumber = isInputEmpty(inputNumber.current.value)
+    newDataCard.number.error = errorNumber
+
+    const inputMonth = input3Ref
+    const errorMonth = isInputEmpty(inputMonth.current.value)
+    newDataCard.month.error = errorMonth
+
+    const inputYear = input4Ref
+    const errorYear = isInputEmpty(inputYear.current.value)
+    newDataCard.month.error = errorYear
+
+    const inputCode = input5Ref
+    const errorCode = isInputEmpty(inputCode.current.value)
+    newDataCard.code.error = errorCode
+
+    setDataCardRender(newDataCard)
+    setDataCard(newDataCard)
+  }
+
+  const isInputEmpty = (value) => {
+    if (value === '') {
+      return 'Can’t be blank'
+    }
   }
 
   const handleChange = (e) => {
@@ -54,7 +97,10 @@ export const Form = ({ dataCard, setDataCard }) => {
 
     const newData = {
       ...dataCardRender,
-      [e.target.id]: valueInput
+      [e.target.id]: {
+        text: valueInput,
+        error: null
+      }
     }
 
     setDataCardRender(newData)
@@ -72,10 +118,10 @@ export const Form = ({ dataCard, setDataCard }) => {
           name='name'
           placeholder='e.g Jane Appleseed'
           onChange={(e) => handleChange(e)}
-          value={dataCardRender ? dataCardRender.name : ''}
+          value={dataCardRender ? dataCardRender.name.text : ''}
           ref={input1Ref}
         />
-        <span className='form-card__error hidden'>Wrong format, numbers only</span>
+        <span className='form-card__error'>{dataCardRender.name.error && dataCardRender.name.error}</span>
       </div>
 
       <div className='form-card__number-container'>
@@ -86,7 +132,7 @@ export const Form = ({ dataCard, setDataCard }) => {
           id='number'
           placeholder='e.g Jane Appleseed'
           onChange={(e) => handleChange(e)}
-          value={dataCardRender ? dataCardRender.number : ''}
+          value={dataCardRender ? dataCardRender.number.text : ''}
           ref={input2Ref}
         />
         <span className='form-card__error hidden'>Wrong format, numbers only</span>
@@ -125,7 +171,7 @@ export const Form = ({ dataCard, setDataCard }) => {
             placeholder='e.g. 123'
             onChange={(e) => handleChange(e)}
             ref={input5Ref}
-            value={dataCardRender ? dataCardRender.code : ''}
+            value={dataCardRender ? dataCardRender.code.text : ''}
 
           />
           <span className='form-card__error hidden'>Can’t be blank</span>
