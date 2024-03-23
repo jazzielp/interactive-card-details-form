@@ -1,6 +1,6 @@
 import './FrontCard.css'
 import IconCard from '../icons/card-logo.svg'
-export const FrontCard = ({ name, number = '0000 0000 0000 0000', month = '00', year = '00' }) => {
+export const FrontCard = ({ name, number, month, year }) => {
   const upperName = name.toUpperCase()
   return (
     <div className='front-card'>
