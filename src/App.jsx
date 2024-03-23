@@ -4,11 +4,26 @@ import { Thanks } from './components/Thanks'
 import { useState } from 'react'
 export function App () {
   const cardJson = {
-    name: 'JANE APPLESEED',
-    number: '0000 0000 0000 0000',
-    month: '00',
-    year: '00',
-    code: '000'
+    name: {
+      text: 'JANE APPLESEED',
+      error: null
+    },
+    number: {
+      text: '0000 0000 0000 0000',
+      error: null
+    },
+    month: {
+      text: '00',
+      error: null
+    },
+    year: {
+      text: '00',
+      error: null
+    },
+    code: {
+      text: '000',
+      error: null
+    }
   }
 
   const [isComplete, setIsComplete] = useState(false)
