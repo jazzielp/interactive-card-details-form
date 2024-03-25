@@ -24,3 +24,30 @@
   left: 0;
   top: 56%;
 }
+
+@media only screen and (min-width: 1300px) {
+  .header {
+    width: 483px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .header__card-container {
+    position: absolute;
+    width: 541px;
+    flex-direction: column-reverse;
+    gap: 37px;
+    align-items: start;
+    top: 25%;
+    left: 25%;
+  }
+
+  .header__frontCard-container {
+    align-self: end;
+  }
+
+  .header__backCard-container {
+    position: static;
+  }
+}

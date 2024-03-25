@@ -21,7 +21,7 @@
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.8rem;
   letter-spacing: 2.2px;
-  font-weight:400;
+  font-weight: 400;
   color: var(--white);
   margin-bottom: 17px;
 }
@@ -33,4 +33,31 @@
   justify-content: space-between;
   letter-spacing: .129rem;
   color: var(--white);
+}
+
+@media only screen and (min-width: 1300px) {
+  .front-card {
+    width: 447px;
+    height: 245px;
+    padding: 28px 32px;
+    border-radius: 10px;
+  }
+
+  .front-card__icon-primary {
+    width: 84px;
+    height: 47px;
+    margin-bottom: 64px;
+  }
+
+  .front-card__number-card {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 3.42px;
+    margin-bottom: 24px;
+  }
+
+  .front-card__info-container {
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+  }
 }

@@ -46,3 +46,18 @@ input[type=date]::-webkit-outer-spin-button {
 input[type=date] {
   -moz-appearance: textfield;
 }
+
+@media only screen and (min-width: 1300px) {
+  #app {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+  }
+
+  main {
+    align-items: center;
+    width: 100%;
+    margin: 0
+  }
+}

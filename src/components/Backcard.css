@@ -19,3 +19,19 @@
   text-align: end;
   margin: 55px 15px;
 }
+
+@media only screen and (min-width: 1300px) {
+  .back-card {
+    width: 447px;
+    height: 245px;
+    padding: 28px 32px;
+    border-radius: 10px;
+  }
+
+  .back-card__security-code {
+    font-size: 1.4rem;
+    color: var(--white);
+    letter-spacing: .2rem;
+    margin: 83px 25px;
+  }
+}
