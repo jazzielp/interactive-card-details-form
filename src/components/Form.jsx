@@ -143,6 +143,16 @@ export const Form = ({ dataCard, setDataCard, handleComplete }) => {
 
     setDataCardRender(newData)
     setDataCard(newData)
+
+    if (nameInput === 'month' && newData.month.text.length >= 2) {
+      input4Ref.current.focus()
+      return null
+    }
+
+    if (nameInput === 'year' && newData.year.text.length >= 2) {
+      input5Ref.current.focus()
+      return null
+    }
   }
 
   return (
