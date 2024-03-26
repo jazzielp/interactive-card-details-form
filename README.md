@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Web](https://jazzielp.github.io/interactive-card-details-form/)
+- Live Site URL: [Github](https://github.com/jazzielp/interactive-card-details-form/)
 
 ## My process
 
