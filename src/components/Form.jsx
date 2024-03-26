@@ -1,7 +1,7 @@
 import './Form.css'
 import { ButtonPrincipal } from './ButtonPrincipal'
 import { useRef, useState } from 'react'
-export const Form = ({ dataCard, setDataCard }) => {
+export const Form = ({ dataCard, setDataCard, handleComplete }) => {
   const [dataCardRender, setDataCardRender] = useState({
     name: {
       text: '',
@@ -87,6 +87,10 @@ export const Form = ({ dataCard, setDataCard }) => {
 
     setDataCardRender(newDataCard)
     setDataCard(newDataCard)
+
+    if (newDataCard.name.error === undefined && newDataCard.number.error === undefined && newDataCard.month.error === undefined && newDataCard.year.error === undefined && newDataCard.code.error === undefined) {
+      handleComplete()
+    }
   }
 
   const isInputEmpty = (value) => {

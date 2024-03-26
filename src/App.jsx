@@ -33,6 +33,7 @@ export function App () {
 
   // It is used to simulate that the form was submitted and to be able to render a thank you message
   const handleComplete = () => {
+    console.log('entra')
     setIsComplete(!isComplete)
   }
 
@@ -40,7 +41,7 @@ export function App () {
     <>
       <Header dataCard={dataCard} />
       <main>
-        {isComplete ? <Thanks handleComplete={handleComplete} /> : <Form dataCard={dataCard} setDataCard={setDataCard} />}
+        {isComplete ? <Thanks handleComplete={handleComplete} /> : <Form dataCard={dataCard} setDataCard={setDataCard} handleComplete={handleComplete} />}
       </main>
     </>
   )
